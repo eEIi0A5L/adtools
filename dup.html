@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dup</title>
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+
+<style type="text/css">
+.example img {
+	width: 100%;
+}
+</style>
+</head>
+
+<body>
+<h1>dup</h1>
+<input type="file" id="file1"><br/>
+<input type="file" id="file2"><br/>
+<button type=button onclick="func()">
+dup
+</button> 
+
+<script>
+// line1がlines2の中にあればtrueを返す。
+function is_in_text( line1, lines2)
+{
+    for ( var i = 0; i < lines2.length; i++ ) {
+        // 空行は無視する
+        if ( lines2[i] == '' ) {
+            continue;
+        }
+
+		line2 = lines2[i];
+ 
+		if ( line1 == line2 ) {
+			return true;
+		}
+    }
+	return false;
+}
+
+function dup(text1,text2)
+{
+	//console.log(text1);
+	//console.log(text2);
+
+	var lines1 = text1.split( '\n' );
+	var lines2 = text2.split( '\n' );
+
+    for ( var i = 0; i < lines1.length; i++ ) {
+        // 空行は無視する
+        if ( lines1[i] == '' ) {
+            continue;
+        }
+
+		line1 = lines1[i];
+ 
+        var result = is_in_text( line1, lines2);
+		console.log(result);
+		if ( result ) {
+			console.log(line1);
+		}
+    }
+
+}
+
+function func() {
+	//alert("func()");
+
+
+	var obj1 = document.getElementById("file1"); 
+	var obj2 = document.getElementById("file2"); 
+
+	var file1 = obj1.files;
+	var file2 = obj2.files;
+
+	//FileReaderの作成
+	var reader1 = new FileReader();
+	var reader2 = new FileReader();
+	//テキスト形式で読み込む
+	reader1.readAsText(file1[0]);
+
+	var text1 = "";
+	var text2 = "";
+
+	//読込終了後の処理
+	reader1.onload = function(ev){
+		//テキストエリアに表示する
+		//document.test.txt.value = reader.result;
+		text1 = reader1.result;
+		reader2.readAsText(file2[0]);
+	}
+	reader2.onload = function(ev){
+		//テキストエリアに表示する
+		//document.test.txt.value = reader.result;
+		text2 = reader2.result;
+
+		// この段階で、text1とtext2両方が読み込まれたので処理を開始する。
+		dup(text1,text2);
+	}
+
+
+
+}
+</script>
+
+</body>
+
+</html>

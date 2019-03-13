@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benchmark</title>
+<script type="text/javascript">
+<!--
+
+
+var orig_string = "http://tags.bluekai.com/site/25193?ret=html&phint=prop4%3Dhomepage&phint=prop5%3Dabcn%3A&phint=prop15%3DRepeat&phint=eVar2%3D&phint=eVar20%3D&phint=channel%3Dabcn&phint=__bk_t%3DABC%20News%20%E2%80%93%20Breaking%20News%2C%20Latest%20News%2C%20Headlines%20%26%20Videos&phint=__bk_k%3DABC%20News%2C%20breaking%20news%2C%20headline%20news%2C%20latest%20news%2C%20top%20news%2C%20online%20news%2C%20video%20news%2C%20world%20news%2C%20national%20news%2C%20abc%20news%2C%20abcnews%2C%20abc%20news%20online&phint=__bk_l%3Dhttp%3A%2F%2Fabcnews.go.com%2F&limit=10&bknms=ver=2.0,ua=3ad4afbcade9774a74167ed4fbea13d7,t=1519684361954,m=f457e02aad67bb5b16ef6aeb6fef05cf,k=1,lang=07ef608d8a7e9677f0b83775f0b83775,sr=1920x1080x24,tzo=-540,hss=true,hls=true,idb=true,addb=undefined,odb=undefined,cpu=4b4e4ecaab1f1c93ab1f1c93ab1f1c93,platform=3ef34a5b473b735a6bcc3d2a6bcc3d2a,&act=ads_,plugins=b3c77946569bcb0aca30d6e4992cfd13&r=4288778";
+//var orig_string = "http://a.com/";
+
+
+function proc( reg) {
+	var ret = null;
+	for (  var i = 0;  i < 1000000;  i++  ) {
+		// 繰り返し処理
+		rep = orig_string.match(reg);
+		ret = rep;
+	}
+	return ret;
+}
+
+function proc_wrap( label, reg_str, elem) {
+	var startTime = new Date();
+	var reg = new RegExp(reg_str);
+	rep = proc(reg);
+	var endTime = new Date();
+
+	//startTime から endTime までの処理時間をミリ秒で出力。
+	var result = endTime - startTime + "ms";
+	var element=document.getElementById(elem);
+	element.innerHTML = label + " " + reg_str + ": " + result + ": rep=" + rep;
+}
+
+function calc() {
+
+	var element=document.getElementById("orig_string");
+	element.innerHTML = orig_string;
+
+
+	var search_str = "&act=ads_";
+	//var search_str = "http";
+	proc_wrap( "①", "^" + search_str + "", "result1");
+	proc_wrap( "②", "" + search_str + "", "result2");
+
+}
+// -->
+</script>
+</head>
+<body onload="calc()">
+<h1>Benchmark</h1>
+
+
+<div id="orig_string" style="font-family:monospace;"></div>
+<br/>
+<div id="result1" style="font-family:monospace;"></div>
+<br/>
+<div id="result2" style="font-family:monospace;"></div>
+<br/>
+
+</body>
+</html>
