@@ -12,6 +12,7 @@ aan.amazon.co.jp
 ad-stir.com
 ad.appier.net
 ad.ca-conv.jp
+ad.caprofitx.adtdp.com
 ad.crwdcntrl.net
 ad.doubleclick.net
 ade.googlesyndication.com
@@ -28,6 +29,7 @@ adswizz.com
 adv-creatives.s3.amazonaws.com
 affiliate
 amoad.com
+ap-northeast-1.event.prod.bidr.io
 ap2.remerge.events
 api.bucketeer.jp
 api.leanplum.com
@@ -45,6 +47,7 @@ build-cdn.liftoff.io
 cat.jp.as.criteo.com
 cd.ladsp.com
 cdn-f.adsmoloco.com
+cdn.caprofitx.com
 cdn.liftoff.io
 cdp.cloud.unity3d.com
 control.smbeat.jp
@@ -60,6 +63,7 @@ ds.adapf.com
 e.crashlytics.com
 frontier.byteoversea.com
 gce-jp.bidswitch.net
+gecko-sg.byteoversea.com
 goldspotmedia
 googleads.g.doubleclick.net
 graph.facebook.com
@@ -82,8 +86,10 @@ localhost:57439/smile
 log.byteoversea.com
 mads-fe.amazon.com
 media.admob.com
+media.bidr.io
 microad.jp
 moatads.com
+mon.byteoversea.com
 mon.musical.ly/monitor/collect/
 nend.net/
 nrtprod-rtbwin.applovin.com
@@ -119,7 +125,6 @@ tapone.jp
 tkimpdsp.mobvista.com
 tpc.googlesyndication.com
 tr-asia.adsmoloco.com
-tshop.r10s.jp
 tunein.deliveryengine.adswizz.com
 txn.ingest.crittercism.com
 uncn.jp
@@ -130,5 +135,4 @@ yads.yahoo.co.jp/
 yt.moatads.com
 yt3.ggpht.com
 zucks
-
 

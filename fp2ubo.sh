@@ -1,8 +1,9 @@
 #!/bin/bash
+# filterproxyのdenylistをubo用に変換する
 
 FILE=android_filterproxy
 
-while read line; do
+while IFS=$'\r' read line; do
 	#echo $line
 
 	if [[ $line =~ ^$ ]]; then
