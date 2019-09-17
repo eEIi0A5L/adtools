@@ -53,9 +53,6 @@ function check() {
 
 function main() {
     FILE=domainlist
-    if [ ! -f $FILE ]; then
-        return
-    fi
     while read line; do
         domain=$line
         check $domain
