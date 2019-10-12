@@ -11,3 +11,4 @@ for i in $DIR/*.txt; do
     ./extdomain.sh $i | tee -a all
     ./conn.sh | tee -a all
 done
+grep -E "(\.txt|===)" all > result
