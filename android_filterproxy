@@ -1,5 +1,5 @@
 # FilterProxy's setting text
-.adnxs.com
+# .adnxs.com
 .amazon-adsystem.com/
 .app-adforce.jp
 .fout.jp
@@ -8,7 +8,9 @@
 .w55c.net
 .zucks.net.zimg.jp
 /counter/
+583-d.tlnk.io/serve
 aan.amazon.co.jp
+aarki.net
 ad-stir.com
 ad.appier.net
 ad.ca-conv.jp
@@ -20,6 +22,7 @@ adforce
 adid
 adjust.com
 adntokyo.gunosy.com
+ads-delivery.gameforge.com
 ads.as.criteo.com
 ads.mopub.com
 ads.nicovideo.jp
@@ -27,12 +30,12 @@ adsafeprotected.com
 adsrvr.org
 adswizz.com
 adv-creatives.s3.amazonaws.com
-affiliate
+adx.g.doubleclick.net
 amoad.com
 ap-northeast-1.event.prod.bidr.io
 ap2.remerge.events
 api.bucketeer.jp
-api.leanplum.com
+# api.leanplum.com
 app-measurement.com
 # appboy-images.com
 assets.gunosy.com/adnet/GunosyAdsSDK.async.js
@@ -82,6 +85,7 @@ imp-adedge.i-mobile.co.jp
 imp.oct-pass.net
 impression-asia.liftoff.io
 k.smartcanvas.net
+lap-click.tr.line.me
 localhost:57439/smile
 log.byteoversea.com
 mads-fe.amazon.com
@@ -93,7 +97,7 @@ mon.byteoversea.com
 mon.musical.ly/monitor/collect/
 nend.net/
 nrtprod-rtbwin.applovin.com
-ocsp.digicert.com/
+# ocsp.digicert.com/
 p.adsymptotic.com/d/px/
 pagead#.googlesyndication.com/
 pagead2.googleadservices.com
@@ -101,6 +105,7 @@ prod-a.applovin.com
 pubads.g.doubleclick.net
 res1.applovin.com
 rtb.astrodsp.com
+s.yimg.jp/images/weather/promo/banner
 s2.2mdn.net
 service.cmp.oath.com
 settings.crashlytics.com
@@ -133,6 +138,4 @@ www.googleadservices.com
 yads.c.yimg.jp
 yads.yahoo.co.jp/
 yt.moatads.com
-yt3.ggpht.com
 zucks
-
