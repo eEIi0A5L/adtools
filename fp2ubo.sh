@@ -29,15 +29,22 @@ while IFS=$'\r' read line; do
     if [[ $line =~ yt3.ggpht.com ]]; then
         continue
     fi
+    #LINE MUSICが表示されない 2021.6.16
+    if [[ $line =~ cdn.line-apps.com ]]; then
+        continue
+    fi
 
     # suffix
     suffix=""
-    if [[ $line =~ doubleclick.net ]]; then
+    if [[ $line =~ doubleclick\.net ]]; then
+        suffix="\$third-party"
+    fi
+    if [[ $line =~ adjust\.com ]]; then
         suffix="\$third-party"
     fi
 
 
-    tmp=${line%/}
-    echo "||$tmp^$suffix"
+    comain=${line%/}
+    echo "||$comain^$suffix"
 done < $FILE
 
